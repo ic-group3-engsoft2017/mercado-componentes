@@ -13,14 +13,26 @@ Durante o desenvolvimento de Bookstore, alguma parte pode precisar acessar o cat
 
 # Pagamento por cartão de crédito
 ## Descrição do componente: 
-Este componente terá uma interface para conexão com o provedor de serviço de pagamento onde dados de conexão serão enviados e validados. Também conterá uma segunda interface para envio dos dados de pagamento de um cliente onde o mesmo receberá um retorno do sucesso ou não da integração.
+Este requer uma interface para conexão com o provedor de serviço de pagamento onde dados de conexão serão enviados e validados. Ele disponibilizará  a interface para envio dos dados de pagamento de um cliente onde o mesmo receberá um retorno do sucesso ou não da integração.
 ## Motivação
-Para centralizar a conexão com o intermediador de pagamentos, e se necessário, fácil de remover e colocar outro sem redeploy da aplicação central.
-## Interfaces
+Para as oepraçes realizadas com um intermediador de pagamentos, e se necessário, fácil de remover e colocar outro sem redeploy da aplicação central.
+## Interfaces 
+### Requerida
 ### IConnection
 + SecureConnection connect()
+### Provida
 ### IExecutePayment
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Order order)
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Consortium order)
+
+# Conector com Intermediador de pagamento
+## Descrição do componente: 
+Este componente disponibiliza uma interface para  conexão com intermediadores de pagamentos via API.
+## Motivação
+Para centralizar a conexão com o intermediador de pagamentos.
+## Interfaces 
+### Provida
+### IConnection
++ SecureConnection connect()
 
 
