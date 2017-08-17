@@ -11,6 +11,7 @@ Durante o desenvolvimento de Bookstore, alguma parte pode precisar acessar o cat
 + getOnlyCategories(String query, int page, int resultPerPage)
 + getOnlyOffers(String query, int page, int resultPerPage)
 
+
 # Pagamento por cartão de crédito
 ## Descrição do componente: 
 Componente responsável por realizar uma interface de comunicação entre uma aplicação qualquer e um intermediador de pagamentos. Todos os dados são recebidos e retornados via JSON para facilitar a integração com qualquer tipo de aplicação, seja ela Mobile ou Web, independentemente da linguagem utilizada no desenvolvimento, flexibilizando também, os dados retornado pelo intermediador de pagamentos.
@@ -25,6 +26,7 @@ Aplicações que necessitam a realização de pagamentos via Cartões de Crédit
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Order order)
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Consortium order)
 
+
 # Conector com Intermediador de pagamento
 ## Descrição do componente: 
 Este componente disponibiliza uma interface para  conexão com intermediadores de pagamentos via API.
@@ -36,3 +38,19 @@ Para centralizar a conexão com o intermediador de pagamentos.
 + SecureConnection connect()
 
 
+# Perfil de Compra
+## Descrição do componente: 
+Este componente oferece a possibilidade de parceiros consumirem nossos dados de analises de compra para direcionarem melhor suas estratégias de marketing.
+Nossa API fornece toda a experiência que nossos clientes tiveram no nosso site durante seu processo de compra alem de dados como um status de possível comprador, comprador ou comprador assiduo.
+Para cosumir estes dados basta enviar o numero do cpf do cliente e nosso sistema fará uma análise dinámica devolvendo em tempo ábil uma gama de dados úteis para qualquer vendedor online.
+## Motivação
+Aplicações que desajam consumir experiências de usuários para direcionar melhor suas campanhas de marketing online.
+## Interfaces 
+### Requerida
+### IConnect
++  Connect()
+### Provida
++ GetProfile()
+Retorna um array com os dados baseado no CPF enviado na conexão.
++ GetProfileDetail(Detail:Boolean)
+Retorna um array com todos os dados da experiencia do usuário baseado no CPF enviado na conexão.
