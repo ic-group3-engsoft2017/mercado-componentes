@@ -1,7 +1,7 @@
 # Catalog-v1
-## Descrição do componente: 
-Este componente terá uma interface que lista a estrutura mercadológica cadastrada na Bookstore. Usa NativeQueryLanguage que possibilita a busca e filtragem dos itens. 
-## Motivação: 
+## Descrição do componente:
+Este componente terá uma interface que lista a estrutura mercadológica cadastrada na Bookstore. Usa NativeQueryLanguage que possibilita a busca e filtragem dos itens.
+## Motivação:
 Durante o desenvolvimento de Bookstore, alguma parte pode precisar acessar o catálogo para uso, desde criação de promoções com produtos, categorias e marcas até criação de componentes visuais que focam em um nicho específico de merdado.
 ## Interfaces
 ### IConnection
@@ -11,13 +11,15 @@ Durante o desenvolvimento de Bookstore, alguma parte pode precisar acessar o cat
 + getOnlyCategories(String query, int page, int resultPerPage)
 + getOnlyOffers(String query, int page, int resultPerPage)
 
+## Diagrama
+![Diagrama-Componente](diagramas/componente-catalogo.jpg)
 
 # Pagamento por cartão de crédito
-## Descrição do componente: 
+## Descrição do componente:
 Componente responsável por realizar uma interface de comunicação entre uma aplicação qualquer e um intermediador de pagamentos. Todos os dados são recebidos e retornados via JSON para facilitar a integração com qualquer tipo de aplicação, seja ela Mobile ou Web, independentemente da linguagem utilizada no desenvolvimento, flexibilizando também, os dados retornado pelo intermediador de pagamentos.
 ## Motivação
 Aplicações que necessitam a realização de pagamentos via Cartões de Crédito/Débito via um intermediador de pagamentos.
-## Interfaces 
+## Interfaces
 ### Requerida
 ### IConnection
 + SecureConnection connect()
@@ -28,24 +30,24 @@ Aplicações que necessitam a realização de pagamentos via Cartões de Crédit
 
 
 # Conector com Intermediador de pagamento
-## Descrição do componente: 
+## Descrição do componente:
 Este componente disponibiliza uma interface para  conexão com intermediadores de pagamentos via API.
 ## Motivação
 Para centralizar a conexão com o intermediador de pagamentos.
-## Interfaces 
+## Interfaces
 ### Provida
 ### IConnection
 + SecureConnection connect()
 
 
 # Perfil de Compra
-## Descrição do componente: 
+## Descrição do componente:
 Este componente oferece a possibilidade de parceiros consumirem nossos dados de analises de compra para direcionarem melhor suas estratégias de marketing.
 Nossa API fornece toda a experiência que nossos clientes tiveram no nosso site durante seu processo de compra alem de dados como um status de possível comprador, comprador ou comprador assiduo.
 Para cosumir estes dados basta enviar o numero do cpf do cliente e nosso sistema fará uma análise dinámica devolvendo em tempo ábil uma gama de dados úteis para qualquer vendedor online.
 ## Motivação
 Aplicações que desajam consumir experiências de usuários para direcionar melhor suas campanhas de marketing online.
-## Interfaces 
+## Interfaces
 ### Requerida
 ### IConnect
 +  Connect()
@@ -54,11 +56,13 @@ Aplicações que desajam consumir experiências de usuários para direcionar mel
 Retorna um array com os dados baseado no CPF enviado na conexão.
 + GetProfileDetail(Detail:Boolean)
 Retorna um array com todos os dados da experiencia do usuário baseado no CPF enviado na conexão.
+## Diagrama
+![Diagrama-Componente](diagramas/Componente-Perfil_de_Compra.jpg)
 
 # Sugestao de Produto
 ## Descrição do componente:
 Este componente é responsável por sugerir livros que estão no catalógo do BookStore com base
-no histórico de compras do cliente, visualização de conteúdo e perfil. 
+no histórico de compras do cliente, visualização de conteúdo e perfil.
 ## Motivação
 Tem como principal beneficio impulsionar as vendas do ecommerce e sugerir potenciais livros que o cliente possa
 se interessar.
@@ -74,3 +78,5 @@ se interessar.
 ### IRecomendacaoProduto
 + sugerirProduto
 Sugere produtos da BookStore com base no perfil, historico de compra e produtos visualizados pelo cliente.
+## Diagrama
+![Diagrama-Componente](diagramas/ComponenteSugestãoProduto/ComponenteSugestaoProduto.png)
