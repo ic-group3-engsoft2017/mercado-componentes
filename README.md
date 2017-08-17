@@ -27,7 +27,8 @@ Aplicações que necessitam a realização de pagamentos via Cartões de Crédit
 ### IExecutePayment
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Order order)
 + PaymentTransaction payWithCreditCard(CreditCardInfo card, Consortium order)
-
+## Diagrama
+![Diagrama-Componente](diagramas/componente-pagador.jpg)
 
 # Conector com Intermediador de pagamento
 ## Descrição do componente:
