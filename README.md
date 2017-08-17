@@ -54,3 +54,22 @@ Aplicações que desajam consumir experiências de usuários para direcionar mel
 Retorna um array com os dados baseado no CPF enviado na conexão.
 + GetProfileDetail(Detail:Boolean)
 Retorna um array com todos os dados da experiencia do usuário baseado no CPF enviado na conexão.
+
+# Sugestao de Produto
+## Descrição do componente:
+Este componente é responsável por sugerir livros que estão no catalógo do BookStore com base
+no histórico de compras do cliente, visualização de conteúdo e perfil. 
+## Motivação
+Tem como principal beneficio impulsionar as vendas do ecommerce e sugerir potenciais livros que o cliente possa
+se interessar.
+## Interfaces
+### Requeridas
+### IPerfilCliente
++ retorna uma lista de dados do cliente como sexo, idade, endereço e grupo de consórcio (se fizer parte).
+### IHistoricoCompra
++ Retorna o histórico de compras de produtos especificos do cliente no ecommerce.
+### IHistoricoVisita
++ Retorna o historio de produtos visualizados pelo cliente no ecommerce.
+### Provida
++ sugerirProduto
+Sugere produtos da BookStore com base no perfil, historico de compra e produtos visualizados pelo cliente.
