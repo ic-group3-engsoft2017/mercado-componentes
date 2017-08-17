@@ -71,5 +71,6 @@ se interessar.
 ### IHistoricoVisita
 + Retorna o historio de produtos visualizados pelo cliente no ecommerce.
 ### Provida
+### IRecomendacaoProduto
 + sugerirProduto
 Sugere produtos da BookStore com base no perfil, historico de compra e produtos visualizados pelo cliente.
