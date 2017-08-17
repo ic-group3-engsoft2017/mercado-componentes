@@ -13,9 +13,9 @@ Durante o desenvolvimento de Bookstore, alguma parte pode precisar acessar o cat
 
 # Pagamento por cartão de crédito
 ## Descrição do componente: 
-Este requer uma interface para conexão com o provedor de serviço de pagamento onde dados de conexão serão enviados e validados. Ele disponibilizará  a interface para envio dos dados de pagamento de um cliente onde o mesmo receberá um retorno do sucesso ou não da integração.
+Componente responsável por realizar uma interface de comunicação entre uma aplicação qualquer e um intermediador de pagamentos. Todos os dados são recebidos e retornados via JSON para facilitar a integração com qualquer tipo de aplicação, seja ela Mobile ou Web, independentemente da linguagem utilizada no desenvolvimento, flexibilizando também, os dados retornado pelo intermediador de pagamentos.
 ## Motivação
-Para as oepraçes realizadas com um intermediador de pagamentos, e se necessário, fácil de remover e colocar outro sem redeploy da aplicação central.
+Aplicações que necessitam a realização de pagamentos via Cartões de Crédito/Débito via um intermediador de pagamentos.
 ## Interfaces 
 ### Requerida
 ### IConnection
