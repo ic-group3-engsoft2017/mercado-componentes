@@ -70,7 +70,8 @@ se interessar.
 ## Interfaces
 ### Requeridas
 ### IPerfilCliente
-+ retorna uma lista de dados do cliente como sexo, idade, endereço e grupo de consórcio (se fizer parte).
++ retorna uma lista de dados do cliente como sexo, idade, endereço e grupo de consórcio (se fizer parte). O grupo de consórcio indica quais produtos o 
+cliente tem interesse em comprar, e por consequência pode-se sugerir produtos semelhantes ao mesmo.
 ### IHistoricoCompra
 + Retorna o histórico de compras de produtos especificos do cliente no ecommerce.
 ### IHistoricoVisita
